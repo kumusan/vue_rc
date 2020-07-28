@@ -1,14 +1,13 @@
 <template>
   <div>
-    <div id="target"></div>
     <button @click="toggle">Button</button>
-    <!--err-->
-    <Teleport to="#target">
+    <!--teleport先は<div id="app">外でなければいけない-->
+    <teleport to="#target">
       <div v-if="isBool">
         <p>Teleport</p>
         <button @click="toggle">Button</button>
       </div>
-    </Teleport>
+    </teleport>
   </div>
 </template>
 
